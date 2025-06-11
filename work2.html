@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Portal</title>
+  <style>
+   body { font-family: Arial,sans-serif;  margin: 0; padding: 20px; background-color: #f5f5f5;}
+    .portal { max-width: 1200px; margin:0 auto; padding: 20px; background: white; }
+    .nav-tabs { display: flex; background: #2c3e50; color: white; margin-bottom: 20px}
+     .nav-tab { padding: 25px 20px; color: white; text-decoration: none;}
+     .nav-tab:hover { background: #3498db;}
+     .form-group { margin: 15px 0;}
+     .form-group label { display: block;}
+     .error { color: #e74c3c; font-size: 0.9em;}
+     .hint {color: #e74c3c; font-size: 0.9em;}
+    .form-group input,select,textarea{width: 100%; padding:8px; border: 1px solid #ddd;}
+    table { width:100%; border-collapse: collapse; margin: 20px 0;}
+     th,td { border: 1px solid #ddd; padding: 12px; text-align: left;}
+     th { background: #34495e; color: white;}
+  
+  </style>
+</head>
+<body>
+  <div class="portal">
+    <header>
+      <h1>Academic Portal</h1>
+      <p>Student ID: 2025003|Spring 2025</p>
+    </header>
+    <nav class="nav-tabs">
+         <a href="#registration"
+       class="nav-tab">Course Registration</a>
+         <a href="#transcript"
+       class="nav-tab">Transcript</a> 
+         <a href="#messages"
+       class="nav-tab">messages</a> 
+        <a href="#departments"
+       class="nav-tab">Departments</a>
+        <a href="#results"
+       class="nav-tab">Results</a>
+
+    </nav>
+    <!--COURSE REGISTRATION-->
+    <section id="registration">  </section>
+      <h2>Course registration</h2>
+      <div>
+        <label>Registration progress: </label>
+        <progress value="60"max="100">60%</progress>
+        <span>12/20Credit</span>
+  </div>
+   <form>
+      <fieldset>
+      <legend>Student Information</legend>
+          <div clas="form-group">
+            <label for="level">Academic level</label>
+            <select id="level" required aria-describedby="level-hint">
+              <optgroup
+              label="Undergraduate">
+              <option value="100">100 Level</option>
+              <option value="200">200 Level</option>
+              <option value="300">300 Level</option>
+              <option value="400">400 Level</option>
+            </select>
+            <div id="level-hint"
+            class="hint">select your academic level
+            </div>
+            <div class="form-group">
+              <label for="dept">Department</label>
+                     <input list="department" id="dept" required
+                     aria-describedby="dept-error">
+                     <datalist id="departments">
+                      <option value="Computer Science"></option>
+                      <option value="Economics"></option>
+                      <option value="Medicine"></option>
+                      <option value="Business Administration"></option>
+                    </datalist>
+                      <div
+                      id="dept-error" class="error"
+                      style="display: none;">select valid department
+                    </div>
+
+             </fieldset>
+             <fieldset>
+              <legend>Course Selection</legend>
+            <div class="form-group">
+              <label>Registration type:</label>
+             <input type="radio" id="full-time" name="reg-type" 
+               calue="full-time" checked>
+              <label for="full-time">Full-time(12+ credits)
+              </label>
+              <input type="radio"
+              id="part-time" name="reg-type"
+              value="part-time">
+             <label for="part-time">part-time(8-11 credits)</label>
+            </div>
+             <div class="form-group">
+              <label>Core Course: </label>
+              <input type="checkbox"
+              id="math101" name="courses" value="MAtH101" checked disabled>
+              <label for="math101">Maths |(3 credits)</label><br>
+              <input type="checkbox"
+              id="eng101" name="courses" value="ENG101" checked >
+              <label for="eng101">English|(3 credits)</label>
+             </div>
+
+             <div class="form-group">
+              <label>Electives:</label>
+              <select multiple name="electives" size="4" aria-describedby="elecive-hint">
+
+                
+               <optgroup label="social Science">
+                <option value="ECo 111">ECO 111- Economics</option>
+                <option value="SOC 111">SOC 111- Sociology</option>
+
+               </optgroup>
+               <optgroup label="Science">
+                <option value="ChEM1 11">CHEM 111- Chemistry</option>
+                <option value="PHY 111">PHY 111- Physics</option>
+              </optgroup>div
+               </optgroup>
+        
+             </fieldset>
+            <button type="submit">Register courses</button>
+   </form> 
+  <section id="transcript">
+    <h2>Transcript</h2>
+    <div>
+      <label>GPA:</label>
+      <meter value="3.5" min="0" max="4.0">3.5</meter>
+      <span>3.5/4.0</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Semester</th>
+          <th>Course</th>
+          <th>Credits</th>
+          <th>Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1st 2025</td>
+          <td>MATH101</td>
+          <td>4</td>
+          <td>A</td>
+        </tr>
+        <tr>
+          <td>1s 2025</td>
+          <td>ENG101</td>
+          <td>3</td>
+          <td>B</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Total Credits</th>
+          <th>6</th>
+          <th>GPA</th>
+          <th>3.6</th>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+
+  
+
+</body>
+</html>
